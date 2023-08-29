@@ -1,0 +1,253 @@
+.song-info-section {
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.song-info-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-release-wrapper {
+    display: flex;
+}
+
+.album-release-wrapper #album {
+    padding-right: 5px;
+}
+
+.song-cover {
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 1px var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+#artist {
+    font-family: var(--main-font);
+    font-weight: 500;
+}
+
+.song-cover, #deezer-link {
+    width: 60vw;
+}
+
+#song-preview {
+    background-color: var(--primary-text-color);
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0px 0px 10px 10px;
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+}
+
+#title {
+    margin-top: 20px;
+}
+
+#song-preview i {
+    font-size: 4vw;
+    animation-duration: 1s;
+    cursor: pointer;
+}
+
+#song-preview {
+    cursor: pointer;
+    transition: .3s;
+}
+
+#deezer-link {
+    background-color: var(--primary-text-color);
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    transition: .3s;
+    align-self: center;
+}
+
+#deezer-link img {
+    max-width: 50%;
+    max-height: 40%;
+}
+
+.lyrics-section {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#song-lyrics {
+    padding: 0;
+    margin: 0;
+}
+
+.loading-wrapper {
+    text-align: center;
+}
+
+.loading-wrapper i {
+    color: var(--primary-text-color);
+    font-size: 25px;
+}
+
+pre, #song-lyrics {
+    font-family: var(--main-font);
+    color: var(--primary-text-color);
+    overflow: auto;
+    white-space: pre-wrap;
+    padding: 0;
+    margin: 0;
+    font-size: 4vw;
+}
+
+@keyframes button-flip-out {
+    from {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes button-flip-in {
+    from {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 500px) {
+    pre, #song-lyrics {
+        font-size: 2vw;
+    }
+
+    .song-info-wrapper {
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .song-info {
+        align-items: flex-start;
+        text-align: left;
+        height: 200px;
+    }
+
+    .title-info {
+        align-items: flex-start;
+    }
+
+    #title {
+        margin-top: 0;
+    }
+
+    .song-cover {
+        max-width: 180px;
+        max-height: 100%;
+        margin-left: 10px;
+    }
+
+    #deezer-link {
+        width: 100px;
+        height: 30px;
+        align-self: flex-start;
+    }
+
+    #song-preview i {
+        font-size: 12px;
+    }
+
+    .lyrics-section {
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 700px) {
+    pre, #song-lyrics {
+        font-size: 1.5vw;
+    }
+
+    #deezer-link {
+        width: 130px;
+        height: 35px;
+        min-height: 35px;
+    }
+
+    .song-cover {
+        max-width: 180px;
+        max-height: 100%;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    pre, #song-lyrics {
+        font-size: 15px;
+    }
+
+    #deezer-link {
+        width: 150px;
+        height: 40px;
+    }
+
+    .lyrics-section {
+        padding-top: 60px;
+    }
+
+    .song-cover {
+        max-width: 180px;
+        max-height: 100%;
+        margin-left: 30px;
+    }
+}
+
+@media (hover: hover) {
+    #deezer-link:hover {
+        transition: .3s;
+        background-color: var(--active-color);
+    }
+
+    #song-preview:hover {
+        transition: .3s;
+        background-color: var(--active-color);
+    }
+}

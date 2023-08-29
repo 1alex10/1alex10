@@ -1,0 +1,167 @@
+.header-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header-section h2 {
+    margin-top: 15px;
+}
+
+#searchbar-main {
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px 15px 10px 30px;
+    margin-right: 0px;
+    border: none;
+}
+
+#searchbar-main-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#js-searchbar-icon-main {
+    position: absolute;
+    bottom: 23px;
+    left: 12px;
+    font-size: 10px;
+    color: rgb(134, 134, 134);
+}
+
+.h2-button-wrapper h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 4.5vw;
+}
+
+.song-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding: 20px 0px 20px 5px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 1px;
+}
+
+.song-grid::after {
+    content: "";
+    flex: 0 0 20px;
+}
+
+.song-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.h2-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-wrapper {
+    display: flex;
+}
+
+.button-chevron {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 90;
+    font-size: 0.7em;
+    transition: .3s;
+}
+
+.chevron-right {
+    margin-left: 5px;
+}
+
+.chevron-left {
+    margin-right: 5px;
+}
+
+.chevron-right i {
+    padding-left: 3px;
+}
+
+.chevron-left i {
+    padding-right: 3px;
+}
+
+@media (min-width: 500px) {
+    .h2-button-wrapper h2 {
+        font-size: 2.2vw;
+    }
+
+    .song-grid {
+        padding: 20px 0px 20px 15px;
+    }
+
+    .song-grid::after {
+        flex: 0 0 40px;
+    }
+}
+
+@media (min-width: 700px) {
+    .h2-button-wrapper h2 {
+        font-size: 2vw;
+    }
+
+    .song-grid {
+        position: relative;
+        padding: 20px 0px 20px 35px;
+    }
+
+    .song-grid::after {
+        flex: 0 0 60px;
+    }
+
+    #searchbar-main {
+        margin-top: 70px;
+        padding: 10px 15px 10px 30px;
+    }
+
+    .header-section {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .h2-button-wrapper h2 {
+        font-size: 20px;
+    }
+
+    .song-grid {
+        padding: 20px 0px 20px 55px;
+    }
+
+    .song-grid::after {
+        flex: 0 0 80px;
+    }
+
+    #searchbar-main {
+        padding: 13px 15px 13px 40px;
+    }
+
+    #js-searchbar-icon-main {
+        bottom: 26px;
+        left: 15px;
+    }
+}
+
+@media (hover: hover) {
+    .button-chevron:hover {
+        transition: .3s;
+        background-color: var(--active-color);
+    }
+}

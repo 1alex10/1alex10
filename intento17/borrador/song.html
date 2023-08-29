@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music poms</title>
+    <link rel="shortcut icon" type="image/logo.png" href="img/logo.png">
+    <link rel="apple-touch-icon" type="image/logo.png" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/song.css">
+    <script src="https://kit.fontawesome.com/6a2f31ed4f.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+
+    <!-- Page loader -->
+    <div class="loader"></div>
+
+    <nav>
+        <a class="logo" href="index.html">Music poms</a>
+        <div class="searchbar-wrapper">
+            <div class="searchbar-logo-wrapper">
+                <a id="js-searchbar-icon-anchor"><i id="js-searchbar-icon" class="fas fa-search"></i></a>
+                <input id="searchbar-nav" class="searchbar hide" type="search" maxlength="50" placeholder="Nach Song suchen" onkeyup="initSearchResultElements(this, 20, 'res', event)">
+                <i id="js-close" class="fas fa-arrow-left"></i>
+            </div>
+            <div class="search-result-container hide" id="search-result-container"></div>
+        </div>
+        <i id="js-search" class="fas fa-search"></i>
+    </nav>
+
+    <article class="page-wrapper">
+    
+        <section class="song-info-section">
+            <div class="song-info-wrapper page-padding section-padding">
+                <div class="song-info">
+                    <div class="title-info element-margin">
+                        <h1 id="title" class="element-margin">Title</h1>
+                        <h2 id="artist" class="element-margin">Artist</h2>
+                        <div class="album-release-wrapper element-margin">
+                            <h3 id="album">Album</h3>
+                            <h3 id="release-year">Release</h3>
+                        </div>
+                    </div>  
+                    <a id="deezer-link" class="element-margin shadow" target="_blank">
+                        <img src="img/logo.png" alt="logo.png">
+                    </a>       
+                </div>
+                <div class="song-cover element-margin shadow">
+                    <img id="cover">
+                    <div id="song-preview" class="shadow">
+                        <i class="fas fa-play"></i>
+                        <i class="hide fas fa-stop"></i>
+                    </div>
+                </div>
+            </div>          
+        </section>
+    
+        <section class="lyrics-section section-padding">
+            <div class="page-padding">
+                <p id="song-lyrics">
+                    <div class="loading-wrapper">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </div>
+                    
+                </p>
+            </div>
+        </section>
+
+    </article>
+
+    <footer class="footer section padding page-padding">
+        <p>&copy music poms</p>
+    </footer>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
